@@ -5,7 +5,7 @@ using namespace std;
 #define ull long long
 #define mod (int)(1e9+7)
 
-int main(){
+int main() {
     int n, m;
     cin >> n >> m;
     map<int, int> cnt, cnt2;
