@@ -7,15 +7,14 @@ int main() {
     
     long long n;
     cin >> n;
-    
-    int res = 0;
-    while (n >= 10) {
-        long long temp = n;
-        while (temp % 5 == 0) {
-            temp /= 5;
-            res++;
+    if (n&1) cout << "0\n";
+    else {
+        n /= 2;
+        long long ans = 0;
+        while (n) {
+            ans += (n / 5);
+            n /= 5;
         }
-        n -= 10;
+        cout << ans << '\n';
     }
-    cout << res << '\n';
 }
